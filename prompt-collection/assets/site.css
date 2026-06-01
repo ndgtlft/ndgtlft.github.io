@@ -1,0 +1,145 @@
+:root {
+    color-scheme: light dark;
+    --background: #f7f8fa;
+    --surface: #ffffff;
+    --text: #1f2328;
+    --muted: #616b76;
+    --border: #d8dee4;
+    --accent: #187ad6;
+    --accent-soft: #e8f2fc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.7;
+}
+
+a {
+    color: var(--accent);
+}
+
+.page {
+    width: min(920px, 100%);
+    margin: 0 auto;
+    padding: 40px 20px 64px;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.brand {
+    color: var(--text);
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    text-decoration: none;
+}
+
+.hero,
+.content {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: clamp(24px, 5vw, 44px);
+}
+
+.hero {
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.2;
+}
+
+h2 {
+    margin: 32px 0 8px;
+    font-size: 1.25rem;
+}
+
+p,
+ul {
+    margin: 0 0 16px;
+}
+
+ul {
+    padding-left: 1.4rem;
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 1.1rem;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.button {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 10px 16px;
+    background: var(--accent);
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button.secondary {
+    border: 1px solid var(--border);
+    background: var(--accent-soft);
+    color: var(--accent);
+}
+
+.meta {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.footer {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #121416;
+        --surface: #1b1f23;
+        --text: #f0f3f6;
+        --muted: #a7b0ba;
+        --border: #343a40;
+        --accent: #66b2ff;
+        --accent-soft: #10283d;
+    }
+}
