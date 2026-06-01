@@ -102,6 +102,21 @@ ul {
     margin-top: 24px;
 }
 
+.language-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.language-links a {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 10px;
+    background: var(--surface);
+    text-decoration: none;
+}
+
 .button {
     display: inline-flex;
     min-height: 44px;
